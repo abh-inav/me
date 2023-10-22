@@ -1,0 +1,381 @@
+<html>
+
+<head>
+    <style>
+        html {
+            background: #E8E8E8;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Hide scrollbars for all elements */
+        ::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+
+        /* Hide scrollbar track */
+        ::-webkit-scrollbar-track {
+            display: none;
+        }
+
+        /* Hide scrollbar thumb */
+        ::-webkit-scrollbar-thumb {
+            display: none;
+        }
+
+        /* Hide scrollbar buttons (arrows) */
+        ::-webkit-scrollbar-button {
+            display: none;
+        }
+
+
+        .card {
+            border-radius: 16px;
+            background: #E8E8E8;
+            box-shadow: -6px -6px 12px 0px #FFF, 6px 6px 12px 0px #C5C5C5;
+
+        }
+
+        #message {
+            position: absolute;
+            height: 2.5em;
+            width: 95%;
+        }
+
+        body {
+            padding-left: 1.4em;
+            height: 100%;
+            width: 100%;
+        }
+
+        #profile_image {
+            position: absolute;
+            height: 12em;
+            width: 12em;
+            border-radius: 6em;
+            top: 5em;
+            border-radius: 362px;
+            background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+            box-shadow: 0px 15px 25px -4px rgba(0, 0, 0, 0.25), 0px -3px 4px -1px rgba(0, 0, 0, 0.25) inset, 0px -10px 15px -1px #FFF, 0px 3px 4px -1px #FFF inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.25);
+        }
+
+        #info {
+            position: absolute;
+            height: 38%;
+            width: 41%;
+            top: 5em;
+            left: 18em;
+        }
+
+        #education {
+            position: absolute;
+            height: 38%;
+            width: 29.9%;
+            top: 5em;
+            left: 53em;
+        }
+
+        #itm {
+            height: 100%;
+            width: 95%;
+            position: absolute;
+            top: 52%;
+            grid-template-columns: auto auto auto auto;
+            display: grid;
+            overflow-y: scroll;
+            margin-top: 0.5em;
+        }
+
+        .crd {
+            width: 14em;
+            height: 14em;
+            margin-left: 3em;
+            margin-top: 2em;
+        }
+
+        p {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-style: normal;
+            line-height: normal;
+        }
+
+        #name {
+            font-size: 3em;
+            margin: 0px;
+            margin-left: 0.4em;
+            margin-top: 0.1em;
+
+        }
+
+        #contact {
+            margin-left: 1.4em;
+            margin-top: 0.1em;
+        }
+
+        .cnd {
+            font-size: 1.6em;
+            margin: 0px;
+            color: black;
+            text-decoration: none;
+        }
+
+        #edu {
+            margin: 0;
+            font-size: 2em;
+            font-weight: 600;
+            margin-top: 0.2em;
+            margin-left: 0.5em;
+
+        }
+
+        .deg {
+            font-size: 1.4em;
+            font-weight: 380;
+            margin-top: 0.8em;
+            margin-bottom: 0.6em;
+        }
+
+        #linkedin {
+            background-image: url(linkedin.png);
+        }
+
+        #twitterx {
+            background-image: url(twitterx.png);
+        }
+
+        #instagram {
+            background-image: url(instagram.png);
+        }
+
+        #other {
+            background-image: url(other.png);
+        }
+
+        .asocialm {
+            display: block;
+            height: 100%;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .socialh {
+            height: 78%;
+            width: 12%;
+            margin-top: 1%;
+            margin-right: 3%;
+            border-radius: 6px;
+            background: #E8E8E8;
+            box-shadow: -6px -6px 12px 0px #FFF, 6px 6px 12px 0px #C5C5C5;
+        }
+
+        #social {
+            display: flex;
+            flex-direction: row;
+            height: 37%;
+            width: 100%;
+            justify-content: flex-end;
+
+        }
+        .crd:active {
+            height: 85%;
+    width: 48em;
+    left: 15em;
+    position: fixed;
+    top: 2em;
+        }
+.sklH{
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-left: 13px;
+    margin-top: 13px;
+}
+.crdsec {
+    overflow: hidden;
+    position: relative;
+    height: 53%;
+    width: 90%;
+    left: 1em;
+    top: -1em;
+    color: #1b2932;
+}
+
+.stxt> span {
+    margin: 0.3em;
+    box-shadow: -6px -6px 12px 0px #FFF, 6px 6px 12px 0px #C5C5C5;
+}
+
+.stxt{
+    font-size: 1.3em;
+    font-weight: 400;
+    margin: 0;
+}
+        @media screen and (orientation: portrait) {
+            body {
+                height: 100%;
+                width: 100%;
+            }
+
+            #message {
+                height: 20em;
+                width: 33.9em;
+                left: 42%;
+                top: 5em;
+            }
+
+            #profile_image {
+                height: 20em;
+                width: 20em;
+            }
+
+            #info {
+                position: absolute;
+                height: 25%;
+                width: 95%;
+                top: 28em;
+                left: 1.5em;
+            }
+
+            #education {
+                position: absolute;
+                height: 25%;
+                width: 95%;
+                top: 64em;
+                left: 1.5em;
+            }
+
+            #name {
+                font-size: 8em;
+            }
+
+            .cnd {
+                font-size: 3.6em;
+            }
+
+            #edu {
+                font-size: 4.4em;
+            }
+
+            .deg {
+                font-size: 3.1em;
+            }
+
+            #itm {
+                top: 78%;
+
+            }
+
+            .crd {
+                width: 100%;
+                height: 25%;
+                margin-left: 0;
+            }
+
+            .socialh {
+                height: 78%;
+                width: 17%;
+                margin-top: 2%;
+                margin-left: 3%;
+                border-radius: 6px;
+                background: #E8E8E8;
+                box-shadow: -6px -6px 12px 0px #FFF, 6px 6px 12px 0px #C5C5C5;
+            }
+
+            #social {
+                display: flex;
+                flex-direction: row;
+                height: 37%;
+                width: 100%;
+
+            }
+
+            #itm {
+                height: 100%;
+                width: 95%;
+                position: absolute;
+                top: 72%;
+                overflow-y: scroll;
+                margin-top: 0.5em;
+                display: flow;
+            }
+            .crd:active {
+    height: 70%;
+    width: 94%;
+    left: 2em;
+    position: fixed;
+    top: 2em;
+}
+.sklH {
+    font-weight: 600;
+    font-size: 4.5em;
+    margin-left: 13px;
+    margin-top: 13px;
+}
+.stxt {
+    font-size: 3.5em;
+    font-weight: 400;
+}
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="message" class="card"></div>
+    <div id="profile_image"></div>
+    <div id="info" class="card">
+        <p id="name">Abhinav</p>
+        <div id="contact">
+            <p id="phonenumber" class="cnd">9953925363</p>
+            <a href="abhinavbhatnaria5@gmail.com" style="text-decoration:none;">
+                <p id="email" class="cnd">abhinavbhatnaria5@gmail.com</p>
+            </a>
+        </div>
+        <div id="social">
+            <div class="socialh">
+                <a href="https://www.linkedin.com/in/abhinav-abhinav-b8a7851b3/" id="linkedin" class="asocialm"></a>
+            </div>
+            <div class="socialh">
+                <a href="http://twitter.com/" id="twitterx" class="asocialm"></a>
+            </div>
+            <div class="socialh">
+                <a href="http://instagram.com/" id="instagram" class="asocialm"></a>
+            </div>
+            <div class="socialh">
+                <a id="other" class="asocialm"></a>
+            </div>
+        </div>
+    </div>
+    <div id="education" class="card">
+        <p id="edu">Education</p>
+        <div style="margin-left:0.7em;">
+            <p class="deg">Btech Artificial Intelligence and Data Science</p>
+            <hr style="margin:0; width: 98%;">
+            <p class="deg">Diploma in Computer Science</p>
+        </div>
+    </div>
+    <div id="itm">
+        <div id="prglang" class="crd card">
+            <p class="sklH">Programming languages</p>
+            <div class="crdsec">
+              <p class="stxt">Python<span>|</span> C/C++ <span>|</span>Java<span>|</span> HTML <span>|</span>CSS <span>|</span>JavaScript </p>
+            </div>
+        </div>
+        <div id="prjts" class="crd card">
+            <p class="sklH" >Projects</p>
+            <div class="crdsec">
+                <p class="stxt">ChatGpt ChatBot  <span>|</span>Sentiment Analysis On a Millon News Headline  <span>|</span> Classification ML Algorithm </p>
+                </div>
+        </div>
+        <div id="Certifications" class="crd card">
+            <p class="sklH">Certifications</p>
+           <div class="crdsec">
+            <p class="stxt">Prompt Engineering From DeepLearning.ai</p>
+           </div>
+        </div>
+    </div>
+</body>
+
+</html>
